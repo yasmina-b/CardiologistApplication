@@ -53,12 +53,13 @@ public class PatientRegisterController {
 
     }
 
-    public void registerButtonAction() {
-
+    @FXML
+    public void registerButtonAction()  {
         try {
 
             PatientService.addPatient(usernameField.getText(), passwordField.getText());
             messageField.setText("Account created successfully!");
+
         } catch (UsernameAlreadyExistsException | EmptyPasswordException | EmptyUsernameException e) {
 
             messageField.setText(e.getMessage());
