@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="550.0" prefWidth="500.0" style="-fx-background-color: white; -fx-text-fill: #ff2323;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DoctorNameController">
+    <children>
+
+        <VBox fx:id="doctorName" layoutX="139.0" layoutY="120.0" prefHeight="239.0" prefWidth="214.0" spacing="3.0" />
+        <Text fx:id="welcomeText" fill="#fc4949" fontSmoothingType="LCD" layoutX="8.0" layoutY="86.0" stroke="#bf4242" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome To CARDIOHEALTH" textAlignment="CENTER" wrappingWidth="484.7999873161315">
+            <font>
+                <Font name="Sitka Small Bold" size="30.0" />
+            </font>
+        </Text>
+        <Button layoutX="421.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBack" prefHeight="31.0" prefWidth="65.0" text="Return" textFill="#ff2323">
+            <effect>
+                <Glow />
+            </effect>
+        </Button>
+        <ImageView fitHeight="153.0" fitWidth="201.0" layoutX="146.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@map.png" />
+            </image>
+        </ImageView>
+
+
+    </children>
+</AnchorPane>
