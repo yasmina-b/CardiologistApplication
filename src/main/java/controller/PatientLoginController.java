@@ -24,18 +24,7 @@ public class PatientLoginController {
     @FXML
     public TextField usernameField;
 
-//    @FXML
-//    public void goToPatientLogin(ActionEvent event) throws IOException {
-//
-//        Parent view = FXMLLoader.load(getClass().getClassLoader().getResource("view/PatientLogin.fxml"));
-//        Scene view2 = new Scene(view);
-//
-//        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-//
-//        window.setScene(view2);
-//        window.show();
-//
-//    }
+
     @FXML
     public void loginButtonAction(ActionEvent event) throws IOException, WrongPasswordException, WrongUsernameException, EmptyPasswordException, EmptyUsernameException {
         try {
@@ -44,6 +33,12 @@ public class PatientLoginController {
             alert.showAndWait();
             if(alert.getResult()==ButtonType.OK)
                 alert.close();
+
+            Parent view = FXMLLoader.load(getClass().getClassLoader().getResource("view/CitiesList.fxml"));
+            Scene view2 = new Scene(view);
+            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+            window.setScene(view2);
+            window.show();
         }
         catch (WrongUsernameException | WrongPasswordException | EmptyUsernameException | EmptyPasswordException e) {
             Alert alert=new Alert(Alert.AlertType.WARNING, e.getMessage(), ButtonType.OK);
@@ -53,6 +48,7 @@ public class PatientLoginController {
         }
 
     }
+
 
     @FXML
     public void goToUserLogin(ActionEvent event) throws IOException {
