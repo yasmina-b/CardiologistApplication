@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DoctorNameListController">
+    <children>
+        <TableView fx:id="table" layoutX="108.0" layoutY="76.0" prefHeight="218.0" prefWidth="386.0">
+            <columns>
+                <TableColumn fx:id="prDate" prefWidth="132.0" text="Date" />
+                <TableColumn fx:id="prHour" prefWidth="140.0" text="Hour" />
+                <TableColumn fx:id="prSelect" prefWidth="113.0" text="Confirm" />
+            </columns>
+        </TableView>
+        <Text fx:id="currentDoctor" fill="#ff2323" layoutX="271.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Text>
+        <Button layoutX="502.0" layoutY="21.0" mnemonicParsing="false" onAction="#goBack" text="Return" textFill="#ff2323">
+            <effect>
+                <Glow />
+            </effect></Button>
+        <Button layoutX="216.0" layoutY="320.0" mnemonicParsing="false" onAction="#goToConfirm" text="Confirm Your Appointment" textFill="#ff2323">
+            <effect>
+                <Glow />
+            </effect></Button>
+    </children>
+</AnchorPane>
