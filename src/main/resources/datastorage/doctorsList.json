@@ -1,0 +1,14 @@
+{
+  "Timisoara": [
+    {"name": "Ionescu Andrei", "price": "150","workingHours": "8-17"}
+
+  ],
+  "Arad": [
+    {"name": "Popescu Ion", "price": "150","workingHours": "8-17"}
+
+  ],
+  "Cluj-Napoca": [
+    {"name": "Vasilescu Ana", "price": "150","workingHours": "8-17"}
+
+  ]
+}
