@@ -1,8 +1,6 @@
 package controller;
 
-import exceptions.EmptyPasswordException;
-import exceptions.EmptyUsernameException;
-import exceptions.UsernameAlreadyExistsException;
+import exceptions.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -26,6 +24,14 @@ public class DoctorRegisterController {
     private TextField usernameField;
     @FXML
     private PasswordField passwordField;
+    @FXML
+    private TextField nameField;
+    @FXML
+    private TextField cityField;
+    @FXML
+    private TextField priceField;
+    @FXML
+    private TextField workingHoursField;
     @FXML
     private Text messageField;
 
@@ -64,9 +70,9 @@ public class DoctorRegisterController {
     public void registerButtonAction() {
 
         try {
-            DoctorService.addDoctor(usernameField.getText(), passwordField.getText());
+            DoctorService.addDoctor(usernameField.getText(), passwordField.getText(), nameField.getText(), cityField.getText(), priceField.getText(), workingHoursField.getText() );
             messageField.setText("Account created successfully!");
-        } catch (UsernameAlreadyExistsException | EmptyPasswordException | EmptyUsernameException e) {
+        } catch (UsernameAlreadyExistsException | EmptyPasswordException | EmptyUsernameException | EmptyNameException | EmptyCityException | EmptyPriceException | EmptyWorkingHoursException e) {
 
             messageField.setText(e.getMessage());
             Alert alert=new Alert(Alert.AlertType.WARNING, e.getMessage(), ButtonType.OK);
