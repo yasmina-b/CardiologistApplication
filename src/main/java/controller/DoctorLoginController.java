@@ -53,7 +53,7 @@ public class DoctorLoginController {
             if(alert.getResult()==ButtonType.OK)
                 alert.close();
 
-            Parent view = FXMLLoader.load(getClass().getClassLoader().getResource("view/DoctorLogin.fxml"));
+            Parent view = FXMLLoader.load(getClass().getClassLoader().getResource("view/DoctorMainPage.fxml"));
             Scene view2 = new Scene(view);
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.setScene(view2);
