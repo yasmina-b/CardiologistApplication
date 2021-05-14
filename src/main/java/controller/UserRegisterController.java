@@ -19,7 +19,6 @@ import java.io.IOException;
 
 public class UserRegisterController {
 
-
     @FXML
     public void goToUserLogin(ActionEvent event) throws IOException {
 
