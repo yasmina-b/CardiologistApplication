@@ -1,0 +1,9 @@
+{
+  "doctorName" : [ {
+    "doctorsName" : "Ionescu Andrei"
+  } ],
+  "appointmentList" : [ {
+    "date" : "15.05.2021 ",
+    "hour" : "18:00"
+  } ]
+}
