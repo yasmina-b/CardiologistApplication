@@ -16,7 +16,7 @@ public class HomePageController
     @FXML
     public void goToUserLogin(ActionEvent event) throws IOException {
 
-        Parent view = FXMLLoader.load(getClass().getClassLoader().getResource("HomePage.fxml"));
+        Parent view = FXMLLoader.load(getClass().getClassLoader().getResource("view/UserLoginMainView.fxml"));
         Scene view2 = new Scene(view);
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();

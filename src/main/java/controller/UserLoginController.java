@@ -46,4 +46,15 @@ public class UserLoginController {
         window.setScene(view2);
         window.show();
     }
+    @FXML
+    public void goToHomePage(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("view/HomePage.fxml"));
+        Parent view = loader.load();
+        Scene view2 = new Scene(view);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
+        window.setScene(view2);
+        window.show();
+    }
 }
