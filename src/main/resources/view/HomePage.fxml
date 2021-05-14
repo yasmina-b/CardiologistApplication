@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
 
-<AnchorPane prefHeight="432.0" prefWidth="589.0" style="-fx-background-color: #ba1323; -fx-text-fill: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomePageController">
-<BorderPane layoutX="346.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="246.0" style="-fx-background-color: #ba1323;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
-   <left>
-      <SplitPane prefHeight="439.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
-   </left>
-      <right>
-         <BorderPane prefHeight="439.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
-      </right>
-      <center>
-         <Button mnemonicParsing="false" onAction="#goToUserLogin" prefHeight="31.0" prefWidth="83.0" text="LOGIN" BorderPane.alignment="CENTER" />
-      </center>
-</BorderPane>
-   <ImageView fitHeight="442.0" fitWidth="373.0" layoutX="-6.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
-      <image>
-         <Image url="@doctor-heart.jpg" />
-      </image>
-   </ImageView>
+<AnchorPane prefHeight="429.0" prefWidth="574.0" style="-fx-background-color: white; -fx-text-fill: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomePageController">
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="432.0" prefWidth="573.0">
+   <children>
+      <ImageView fitHeight="432.0" fitWidth="584.0" layoutX="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Picture2.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="215.0" layoutY="362.0" mnemonicParsing="false" onAction="#goToUserLogin" prefHeight="41.0" prefWidth="141.0" text="Login" textFill="#ff2323">
+            <effect>
+               <Glow />
+            </effect>
+      </Button>
+   </children>
+</AnchorPane>
 </AnchorPane>
