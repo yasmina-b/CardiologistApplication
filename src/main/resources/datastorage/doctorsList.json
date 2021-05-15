@@ -1,14 +1,19 @@
 {
   "Timisoara": [
-    {"name": "Ionescu Andrei", "price": "150","workingHours": "8-17"}
+    {"name": "Ionescu Andrei", "price": "150","workingHours": "8:00-12:00"},
+    {"name": "Popescu Mihaela", "price": "100", "workingHours": "8:00-12:00"},
+    {"name": "Mihaiescu Elena", "price": "120", "workingHours": "8:00-12:00"}
 
   ],
   "Arad": [
-    {"name": "Popescu Ion", "price": "150","workingHours": "8-17"}
+    {"name": "Popescu Ion", "price": "100","workingHours": "8-12"},
+    {"name": "Udrescu Alexandru", "price": "90","workingHours": "12-16"},
+    {"name": "Craciun Maria", "price": "110","workingHours": "12-16"}
 
   ],
   "Cluj-Napoca": [
-    {"name": "Vasilescu Ana", "price": "150","workingHours": "8-17"}
-
+    {"name": "Vasilescu Ana", "price": "250","workingHours": "8-12"},
+    {"name": "Basescu Vlad", "price": "250","workingHours": "8-12"},
+    {"name": "Negru Casian", "price": "300","workingHours": "12-16"}
   ]
 }
