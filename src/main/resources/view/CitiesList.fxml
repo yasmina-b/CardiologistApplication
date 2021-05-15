@@ -28,7 +28,7 @@
                 <Image url="@map.png" />
             </image>
         </ImageView>
-        <Button layoutX="203.0" layoutY="359.0" mnemonicParsing="false" onAction="#goToDoctors" text="View Doctors List" textFill="#ff2323">
+        <Button layoutX="183.0" layoutY="374.0" mnemonicParsing="false" onAction="#goToDoctors" text="View Doctors List" textFill="#ff2323">
             <effect>
                 <Glow />
             </effect>

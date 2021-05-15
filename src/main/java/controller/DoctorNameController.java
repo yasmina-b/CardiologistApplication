@@ -30,7 +30,7 @@ public class DoctorNameController implements Initializable {
     @FXML
     public void goBack(ActionEvent event) throws IOException {
 
-        Parent view = FXMLLoader.load(getClass().getClassLoader().getResource("view/PatientLogin.fxml"));
+        Parent view = FXMLLoader.load(getClass().getClassLoader().getResource("view/CitiesList.fxml"));
         Scene view2 = new Scene(view);
 
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();

@@ -20,7 +20,7 @@ public class PatientService {
     public static void loadPatientsFromFile() {
         try {
             ObjectMapper mapper = new ObjectMapper();
-            InputStream inputStream = new FileInputStream(new File("D:\\SEF Project\\NewCardiologistApplication\\src\\main\\resources\\datastorage.json"));
+            InputStream inputStream = new FileInputStream(new File("D:\\SEF Project\\NewCardiologistApplication\\src\\main\\resources\\datastorage\\patient.json"));
             TypeReference<List<Patient>> typeReference = new TypeReference<List<Patient>>() {
             };
             patients = mapper.readValue(inputStream, typeReference);
@@ -43,7 +43,7 @@ public class PatientService {
         patients.add(newPatient);
         try {
             ObjectMapper mapper = new ObjectMapper();
-            File file=new File("D:\\SEF Project\\NewCardiologistApplication\\src\\main\\resources\\datastorage.json");
+            File file=new File("D:\\SEF Project\\NewCardiologistApplication\\src\\main\\resources\\datastorage\\patient.json");
             mapper.writerWithDefaultPrettyPrinter().writeValue(file, patients);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -97,10 +97,6 @@ public class PatientService {
         if(Objects.equals(password,""))
             throw new EmptyPasswordException(password);
     }
-
-    //private static void persistPatients() { /*WRITE THE LIST BACK IN THE JSON FILE
-
-   // }
 
     public static String encodePassword(String salt, String password) {
 

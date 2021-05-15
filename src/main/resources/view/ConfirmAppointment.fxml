@@ -5,18 +5,20 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ConfirmAppointmentController">
     <children>
-        <TableView fx:id="table" layoutX="200.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0">
+        <TableView fx:id="table" layoutX="78.0" layoutY="94.0" prefHeight="178.0" prefWidth="200.0">
             <columns>
                 <TableColumn fx:id="prDate" prefWidth="97.0" text="Date" />
                 <TableColumn fx:id="prHour" prefWidth="102.0" text="Hour" />
             </columns>
         </TableView>
-        <Button fx:id="confirm" layoutX="271.0" layoutY="321.0" mnemonicParsing="false" text="Confirm" textFill="#ff2323">
+        <Button fx:id="confirm" layoutX="141.0" layoutY="286.0" mnemonicParsing="false" prefHeight="5.0" prefWidth="74.0" text="Confirm" textFill="#ff2323">
             <effect>
                 <Glow />
             </effect></Button>
@@ -24,7 +26,17 @@
             <effect>
                 <Glow />
             </effect></Button>
-        <Text layoutX="14.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Appointments" />
-        <TextField fx:id="total" layoutX="126.0" layoutY="321.0" prefHeight="1.0" prefWidth="74.0" />
+        <Text fill="#ff2323" layoutX="375.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Appointments:" wrappingWidth="165.11083984375" />
+        <TextField fx:id="total" layoutX="406.0" layoutY="302.0" prefHeight="31.0" prefWidth="85.0" />
+      <ImageView fitHeight="167.0" fitWidth="141.0" layoutX="392.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@appointment.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="131.0" fitWidth="190.0" layoutX="375.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@heart_app.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>
