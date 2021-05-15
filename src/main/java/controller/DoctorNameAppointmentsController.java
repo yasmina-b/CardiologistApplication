@@ -39,17 +39,6 @@ public class DoctorNameAppointmentsController implements Initializable {
         window.show();
     }
 
-    @FXML
-    public void goToTable(ActionEvent event) throws IOException {
-
-        Parent view = FXMLLoader.load(getClass().getClassLoader().getResource("view/DoctorsScheduledAppointments.fxml"));
-        Scene view2 = new Scene(view);
-
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-        window.setScene(view2);
-        window.show();
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

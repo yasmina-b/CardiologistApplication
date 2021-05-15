@@ -2,14 +2,20 @@ package controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 import model.Appointment;
 import model.ConfirmAppointment;
@@ -38,8 +44,21 @@ public class ViewDoctorAppointmentsController {
 
     private JsonParser jsonParser;
 
+    @FXML
+    public void goBack(ActionEvent event) throws IOException {
+
+        Parent view = FXMLLoader.load(getClass().getClassLoader().getResource("view/DoctorNameAppointments.fxml"));
+        Scene view2 = new Scene(view);
+
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        window.setScene(view2);
+        window.show();
+    }
+
     public void initTable(DoctorsName doctorsName)
     {
+
         try{
             jsonParser = new JsonParser();
             org.json.simple.JSONObject obj = jsonParser.parse("/datastorage/appointments.json");
