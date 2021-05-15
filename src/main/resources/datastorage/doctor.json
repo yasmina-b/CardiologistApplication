@@ -1,6 +1,8 @@
-{
-  "name": "datastorage",
-  "version": "1.0.0",
-  "dependencies": {
-  }
-}
+[ {
+  "username" : "d1",
+  "password" : "\\�\\�����\u001D\u001D�w�*:�ɒ`�\u0007\u0000GH7�\t]�A\u0006s��}�AF=eq�U\n�9Kt\u0017�[\u0005a[��n���",
+  "name" : "d",
+  "city" : "d",
+  "price" : "d",
+  "workingHours" : "d"
+} ]

@@ -17,7 +17,7 @@ public class AppointmentService {
     public static void addAppointment(ConfirmAppointment appointment) {
         try {
             ObjectMapper mapper = new ObjectMapper();
-            File file=new File("D:\\Project_SEF\\new_repo\\CardiologistApplication\\src\\main\\resources\\datastorage\\appointments.json");
+            File file=new File("D:\\SEF Project\\NewCardiologistApplication\\src\\main\\resources\\datastorage\\appointments.json");
 
             mapper.writerWithDefaultPrettyPrinter().writeValue(file, appointment);
         } catch (FileNotFoundException e) {

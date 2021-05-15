@@ -21,7 +21,7 @@ public class DoctorService {
     public static void loadDoctorsFromFile() {
         try {
             ObjectMapper mapper = new ObjectMapper();
-            InputStream inputStream = new FileInputStream(new File("D:/SEF_project/MyProject/src/main/resources/datastorage/patient.json"));
+            InputStream inputStream = new FileInputStream(new File("D:\\SEF Project\\NewCardiologistApplication\\src\\main\\resources\\datastorage\\doctor.json"));
             com.fasterxml.jackson.core.type.TypeReference<List<Doctor>> typeReference = new TypeReference<List<Doctor>>() {
             };
             doctors = mapper.readValue(inputStream, typeReference);
@@ -48,7 +48,7 @@ public class DoctorService {
         doctors.add(newDoctor);
         try {
             ObjectMapper mapper = new ObjectMapper();
-            File file=new File("D:/Project_SEF/Maven/src/main/resources/datastorage/doctor.json");
+            File file=new File("D:\\SEF Project\\NewCardiologistApplication\\src\\main\\resources\\datastorage\\doctor.json");
             mapper.writerWithDefaultPrettyPrinter().writeValue(file, doctors);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
