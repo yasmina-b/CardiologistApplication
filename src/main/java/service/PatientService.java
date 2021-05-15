@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class PatientService {
-    private static List<Patient> patients=new ArrayList<Patient>();
+    public static List<Patient> patients=new ArrayList<Patient>();
 
     public static void loadPatientsFromFile() {
         try {
@@ -102,7 +102,7 @@ public class PatientService {
 
    // }
 
-    private static String encodePassword(String salt, String password) {
+    public static String encodePassword(String salt, String password) {
 
         MessageDigest md = getMessageDigest();
         md.update(salt.getBytes(StandardCharsets.UTF_8));
